@@ -6,8 +6,7 @@
 
 #define BASE  0 // default layer
 #define SHFT  1 // shifted layer
-#define NAVI  2 // navigation keys
-#define NAVI_TWO 3
+#define NAVI  3 // navigation keys
 #define GAME  4
 
 enum custom_keycodes {
@@ -47,7 +46,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         LALT(KC_TAB),   NO_SCLN,      KC_COMM,  KC_DOT,   KC_P,      KC_Y,      KC_LALT,
         KC_ESC,         KC_A,         KC_O,     KC_E,     KC_U,      KC_I,
         TT(SHFT),       NO_APOS,      KC_Q,     KC_J,     KC_K,      KC_B,      KC_LCTRL,
-        TT(NAVI),       TT(NAVI_TWO), KC_LSFT,  KC_LALT,  KC_LGUI,
+        TT(NAVI),       TT(NAVI), KC_LSFT,  KC_LALT,  KC_LGUI,
                                               CTL_T(S(KC_NO)),KC_F3,
                                                               KC_HOME,
                                                KC_SPC,KC_BSPC,KC_END,
@@ -105,7 +104,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                S(KC_PGDN), S(KC_TAB), S(KC_ENT)
       ),
 
-/* Keymap 2: Navigation
+/* Keymap 3: Navigation
  *
  * ,---------------------------------------------------.           ,--------------------------------------------------.
  * |Version  |      |  F1  |  F2  |  F3  |  F4  |  F5  |           |  F6  |  F7  |  F8  |  F9  |  F10 |  F11 |   F12  |
@@ -141,48 +140,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
        KC_F6,   KC_F7,   KC_F8,  KC_F9,   KC_F10,   KC_F11,   KC_F12,
        KC_TRNS, KC_TRNS, KC_PGUP,KC_UP,   KC_PGDN,  KC_TRNS,  KC_TRNS,
                 KC_DOWN, KC_LEFT,KC_DOWN, KC_RGHT,  KC_TRNS,  KC_TRNS,
-       KC_TRNS, KC_TRNS, KC_HOME,KC_TRNS, KC_END,   KC_TRNS,  KC_TRNS,
-                         KC_TRNS,KC_TRNS, KC_TRNS,  KC_TRNS,  KC_TRNS,
-       KC_TRNS, KC_TRNS,
-       KC_TRNS,
-       KC_TRNS, KC_TRNS, KC_TRNS
-),
-/* Keymap 3: Navigation faster
- *
- * ,---------------------------------------------------.           ,--------------------------------------------------.
- * |Version  |      |  F1  |  F2  |  F3  |  F4  |  F5  |           |  F6  |  F7  |  F8  |  F9  |  F10 |  F11 |   F12  |
- * |---------+------+------+------+------+------+------|           |------+------+------+------+------+------+--------|
- * |  EPRM   |      |      | MsUp |      |      |      |           |      |      | PGUP |   UP  | PGDN|     |         |
- * |---------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
- * |         |      |  MsL | MsDwn| MsR  |      |------|           |------|      | RIGHT| DOWN | LEFT |      |        |
- * |---------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
- * |         |      |      |      |      |      |      |           |      |      | HOME |      |  END |      |        |
- * `---------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
- *   |       |      |      | LClk | RClk |                                       |      |      |      |      |      |
- *   `-----------------------------------'                                       `----------------------------------'
- *                                        ,-------------.       ,-------------.
- *                                        |      | SCRL |       |      |      |
- *                                 ,------|------|------|       |------+------+------.
- *                                 |      |      |      |       |      |      |      |
- *                                 |      |      |------|       |------|      |      |
- *                                 |      |      |      |       |      |      |      |
- *                                 `--------------------'       `--------------------'
- */
-// SYMBOLS
-[NAVI_TWO] = LAYOUT_ergodox(
-       // left hand
-       VRSN, KC_TRNS, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,
-       EPRM, KC_TRNS, KC_TRNS, KC_MS_U, KC_TRNS, KC_TRNS, KC_TRNS,
-       KC_TRNS, KC_TRNS, KC_MS_L, KC_MS_D, KC_MS_R, KC_TRNS,
-       KC_LSFT, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-       KC_TRNS, KC_TRNS, KC_TRNS, KC_BTN1, KC_BTN2,
-                                       KC_TRNS,KC_SLCK,
-                                               KC_TRNS,
-                               KC_TRNS,KC_TRNS,KC_TRNS,
-       // right hand
-       KC_F6,   KC_F7,   KC_F8,  KC_F9,   KC_F10,   KC_F11,   KC_F12,
-       KC_TRNS, KC_TRNS, KC_PGUP,LALT(KC_UP),   KC_PGDN,  KC_TRNS,  KC_TRNS,
-                KC_TRNS, LALT(KC_LEFT),LALT(KC_DOWN), LALT(KC_RGHT),  KC_TRNS,  KC_TRNS,
        KC_TRNS, KC_TRNS, KC_HOME,KC_TRNS, KC_END,   KC_TRNS,  KC_TRNS,
                          KC_TRNS,KC_TRNS, KC_TRNS,  KC_TRNS,  KC_TRNS,
        KC_TRNS, KC_TRNS,
@@ -293,9 +250,6 @@ void matrix_scan_user(void)
         ergodox_right_led_1_on();
     break;
   case NAVI:
-    ergodox_right_led_2_on();
-    break;
-  case NAVI_TWO:
     ergodox_right_led_2_on();
     break;
   case GAME:
