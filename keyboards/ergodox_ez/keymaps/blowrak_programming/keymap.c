@@ -6,6 +6,7 @@
 
 #define BASE  0 // default layer
 #define SHFT  1 // shifted layer
+#define SYMB  2 // symbol layer
 #define NAVI  3 // navigation keys
 #define GAME  4
 
@@ -46,7 +47,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         LALT(KC_TAB),   NO_SCLN,      KC_COMM,  KC_DOT,   KC_P,      KC_Y,      KC_LALT,
         KC_ESC,         KC_A,         KC_O,     KC_E,     KC_U,      KC_I,
         TT(SHFT),       NO_APOS,      KC_Q,     KC_J,     KC_K,      KC_B,      KC_LCTRL,
-        TT(NAVI),       TT(NAVI), KC_LSFT,  KC_LALT,  KC_LGUI,
+        TT(SYMB),       TT(NAVI), KC_LSFT,  KC_LALT,  KC_LGUI,
                                               CTL_T(S(KC_NO)),KC_F3,
                                                               KC_HOME,
                                                KC_SPC,KC_BSPC,KC_END,
@@ -104,6 +105,48 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                S(KC_PGDN), S(KC_TAB), S(KC_ENT)
       ),
 
+/* Keymap 2: Symbol Layer
+ *
+ * ,---------------------------------------------------.           ,--------------------------------------------------.
+ * |Version  |  F1  |  F2  |  F3  |  F4  |  F5  |      |           |      |  F6  |  F7  |  F8  |  F9  |  F10 |   F11  |
+ * |---------+------+------+------+------+------+------|           |------+------+------+------+------+------+--------|
+ * |         |   !  |   @  |   {  |   }  |   |  |      |           |      |   Up |   7  |   8  |   9  |   *  |   F12  |
+ * |---------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
+ * |         |   #  |   $  |   (  |   )  |   `  |------|           |------| Down |   4  |   5  |   6  |   +  |        |
+ * |---------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
+ * |         |   %  |   ^  |   [  |   ]  |   ~  |      |           |      |   &  |   1  |   2  |   3  |   \  |        |
+ * `---------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
+ *   | EPRM  |      |      |      |      |                                       |      |    . |   0  |   =  |      |
+ *   `-----------------------------------'                                       `----------------------------------'
+ *                                        ,-------------.       ,-------------.
+ *                                        |Animat|      |       |Toggle|Solid |
+ *                                 ,------|------|------|       |------+------+------.
+ *                                 |Bright|Bright|      |       |      |Hue-  |Hue+  |
+ *                                 |ness- |ness+ |------|       |------|      |      |
+ *                                 |      |      |      |       |      |      |      |
+ *                                 `--------------------'       `--------------------'
+ */
+// SYMBOLS
+[SYMB] = LAYOUT_ergodox(
+       // left hand
+       VRSN,   KC_F1,  KC_F2,  KC_F3,  KC_F4,  KC_F5,  KC_TRNS,
+       KC_TRNS,KC_EXLM,NO_AT,  NO_LCBR,NO_RCBR,NO_PIPE,KC_TRNS,
+       KC_TRNS,KC_HASH,NO_DLR, NO_LPRN,NO_RPRN,NO_GRV,
+     KC_TRNS,KC_PERC,NO_CIRC,NO_LBRC,NO_RBRC,NO_TILD,KC_TRNS,
+          EPRM,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,
+                                       RGB_MOD,KC_TRNS,
+                                               KC_TRNS,
+                               RGB_VAD,RGB_VAI,KC_TRNS,
+       // right hand
+       KC_TRNS, KC_F6,   KC_F7,  KC_F8,   KC_F9,   KC_F10,  KC_F11,
+       KC_TRNS, KC_UP,   KC_7,   KC_8,    KC_9,    NO_ASTR, KC_F12,
+                KC_DOWN, KC_4,   KC_5,    KC_6,    NO_PLUS, KC_TRNS,
+       KC_TRNS, NO_AMPR, KC_1,   KC_2,    KC_3,    NO_BSLS, KC_TRNS,
+                         KC_TRNS,KC_DOT,  KC_0,    NO_EQL,  KC_TRNS,
+       RGB_TOG, RGB_SLD,
+       KC_TRNS,
+       KC_TRNS, RGB_HUD, RGB_HUI
+),
 /* Keymap 3: Navigation
  *
  * ,---------------------------------------------------.           ,--------------------------------------------------.
@@ -246,7 +289,7 @@ void matrix_scan_user(void)
   switch (layer) {
   case BASE:
     break;
-  case SHFT:
+  case SYMB:
         ergodox_right_led_1_on();
     break;
   case NAVI:
