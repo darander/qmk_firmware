@@ -98,8 +98,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                KC_6,        KC_7,       KC_8,       KC_9,      KC_0,        NO_GRV,     NO_UNDS,
                S(KC_ENT),   S(KC_F),    S(KC_G),    S(KC_C),   S(KC_R),     S(KC_L),    NO_QUES,
                             S(KC_H),    S(KC_D),    S(KC_T),   S(KC_N),     S(KC_S),    NO_PIPE,
-               S(KC_BSPC),  S(KC_X),    S(KC_M),    S(KC_W),   S(KC_V),     S(KC_Z),    MO(1),
-                            NO_CIRC,    S(NO_AA),   S(NO_AE),  S(NO_OSLH),  MO(2),
+               S(KC_BSPC),  S(KC_X),    S(KC_M),    S(KC_W),   S(KC_V),     S(KC_Z),    MO(SHFT),
+                            NO_CIRC,    S(NO_AA),   S(NO_AE),  S(NO_OSLH),  MO(SYMB),
                S(KC_LALT),        CTL_T(KC_ESC),
                S(KC_PGUP),
                S(KC_PGDN), S(KC_TAB), S(KC_ENT)
