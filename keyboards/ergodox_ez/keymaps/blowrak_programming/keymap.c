@@ -129,23 +129,23 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // SYMBOLS
 [SYMB] = LAYOUT_ergodox(
        // left hand
-       VRSN,   KC_F1,  KC_F2,  KC_F3,  KC_F4,  KC_F5,  KC_TRNS,
-       KC_TRNS,KC_EXLM,NO_AT,  NO_LCBR,NO_RCBR,NO_PIPE,KC_TRNS,
-       KC_TRNS,KC_HASH,NO_DLR, NO_LPRN,NO_RPRN,NO_GRV,
-       KC_TRNS,KC_PERC,NO_CIRC,NO_LBRC,NO_RBRC,NO_TILD,KC_TRNS,
-       KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,
+       VRSN,   KC_F1,  KC_F2,  KC_F3,  KC_F4,  KC_F5,  KC_NO,
+       KC_NO,KC_EXLM,NO_AT,  NO_LCBR,NO_RCBR,NO_PIPE,KC_NO,
+       KC_NO,KC_HASH,NO_DLR, NO_LPRN,NO_RPRN,NO_GRV,
+       KC_TRNS,KC_PERC,NO_CIRC,NO_LBRC,NO_RBRC,NO_TILD,KC_NO,
+       KC_TRNS,KC_NO,KC_NO,KC_NO,KC_NO,
                                        KC_TRNS,KC_TRNS,
                                                KC_TRNS,
-                               KC_TRNS,KC_TRNS,KC_TRNS,
+                                     KC_TRNS,KC_TRNS,KC_TRNS,
        // right hand
-       KC_TRNS, KC_F6,   KC_F7,  KC_F8,   KC_F9,   KC_F10,  KC_F11,
-       KC_TRNS, KC_UP,   KC_7,   KC_8,    KC_9,    NO_ASTR, KC_F12,
-                KC_DOWN, KC_4,   KC_5,    KC_6,    NO_PLUS, KC_TRNS,
-       KC_TRNS, NO_AMPR, KC_1,   KC_2,    KC_3,    NO_BSLS, KC_TRNS,
-                         KC_TRNS,KC_DOT,  KC_0,    NO_EQL,  KC_TRNS,
-       RGB_TOG, RGB_SLD,
+       KC_NO, KC_F6,   KC_F7,  KC_F8,   KC_F9,   KC_F10,  KC_F11,
+       KC_NO, KC_UP,   KC_7,   KC_8,    KC_9,    NO_ASTR, KC_F12,
+                KC_DOWN, KC_4,   KC_5,    KC_6,    NO_PLUS, KC_NO,
+       KC_NO, NO_AMPR, KC_1,   KC_2,    KC_3,    NO_BSLS, KC_TRNS,
+                         KC_NO,KC_DOT,  KC_0,    NO_EQL,  KC_TRNS,
+       KC_TRNS, KC_TRNS,
        KC_TRNS,
-       KC_TRNS, RGB_HUD, RGB_HUI
+       KC_TRNS, KC_TRNS, KC_TRNS
 ),
 /* Keymap 3: Navigation
  *
@@ -171,20 +171,20 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // SYMBOLS
 [NAVI] = LAYOUT_ergodox(
        // left hand
-       VRSN, KC_TRNS, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,
-       EPRM, KC_TRNS, KC_WH_U, KC_MS_U, KC_WH_D, KC_TRNS, KC_TRNS,
-       KC_TRNS, KC_TRNS, KC_MS_L, KC_MS_D, KC_MS_R, KC_TRNS,
-       KC_LSFT, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+       VRSN, KC_NO, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,
+       EPRM, KC_NO, KC_WH_U, KC_MS_U, KC_WH_D, KC_NO, KC_NO,
+       KC_NO, KC_NO, KC_MS_L, KC_MS_D, KC_MS_R, KC_NO,
+       KC_LSFT, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
        KC_TRNS, KC_TRNS, KC_BTN1, KC_BTN3, KC_BTN2,
                                        TO(GAME),KC_SLCK,
                                                KC_TRNS,
                                KC_TRNS,KC_TRNS,KC_TRNS,
        // right hand
        KC_F6,   KC_F7,   KC_F8,  KC_F9,   KC_F10,   KC_F11,   KC_F12,
-       KC_TRNS, KC_TRNS, KC_PGUP,KC_UP,   KC_PGDN,  KC_TRNS,  KC_TRNS,
-                KC_DOWN, KC_LEFT,KC_DOWN, KC_RGHT,  KC_TRNS,  KC_TRNS,
-       KC_TRNS, KC_TRNS, KC_HOME,KC_TRNS, KC_END,   KC_TRNS,  KC_TRNS,
-                         KC_TRNS,KC_TRNS, KC_TRNS,  KC_TRNS,  KC_TRNS,
+       KC_NO, KC_NO, KC_PGUP,KC_UP,   KC_PGDN,  KC_NO,  KC_NO,
+                KC_DOWN, KC_LEFT,KC_DOWN, KC_RGHT,  KC_NO,  KC_NO,
+       KC_NO, KC_NO, KC_HOME,KC_NO, KC_END,   KC_NO,  KC_TRNS,
+                         KC_NO,KC_NO, KC_NO,  KC_NO,  KC_TRNS,
        KC_TRNS, KC_TRNS,
        KC_TRNS,
        KC_TRNS, KC_TRNS, KC_TRNS
