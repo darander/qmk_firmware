@@ -289,6 +289,10 @@ void matrix_scan_user(void)
   switch (layer) {
   case BASE:
     break;
+  case SHFT:
+    ergodox_right_led_3_on();
+    ergodox_right_led_3_set (LED_BRIGHTNESS_LO);
+    break;
   case SYMB:
     ergodox_right_led_1_on();
     break;
@@ -297,6 +301,7 @@ void matrix_scan_user(void)
     break;
   case GAME:
     ergodox_right_led_3_on();
+    ergodox_right_led_3_set (LED_BRIGHTNESS_HI);
     break;
   }
 };
