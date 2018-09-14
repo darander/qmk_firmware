@@ -48,7 +48,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_ESC,         KC_A,         KC_O,     KC_E,     KC_U,      KC_I,
         TT(SHFT),       NO_APOS,      KC_Q,     KC_J,     KC_K,      KC_B,      KC_LCTRL,
         TT(SYMB),       TT(NAVI), KC_LSFT,  KC_LALT,  KC_LGUI,
-                                              CTL_T(S(KC_NO)),KC_F3,
+                                              LCTL(KC_LSFT),KC_F3,
                                                               KC_HOME,
                                                KC_SPC,KC_BSPC,KC_END,
         // right hand
@@ -57,7 +57,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                           KC_H,       KC_D,       KC_T,      KC_N,        KC_S,       NO_BSLS,
              KC_RCTL,     KC_X,       KC_M,       KC_W,      KC_V,        KC_Z,       MO(SHFT),
                           NO_AT,      NO_AA,      NO_AE,     NO_OSLH,     MO(NAVI),
-             KC_RALT,        CTL_T(KC_ESC),
+             KC_RALT,        LCTL(KC_ESC),
              KC_PGUP,
              KC_PGDN,KC_TAB, KC_ENT
     ),
@@ -91,7 +91,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
           S(KC_ESC),      S(KC_A),      S(KC_O),  S(KC_E),  S(KC_U),   S(KC_I),
           KC_TRNS,        NO_QUO2,      S(KC_Q),  S(KC_J),  S(KC_K),   S(KC_B),   S(KC_LCTRL),
           KC_TRNS,        KC_TRNS,      KC_LSFT,  S(KC_LALT),  S(KC_LGUI),
-                                                CTL_T(S(KC_NO)),S(KC_F3),
+                                                LCTL(KC_LSFT),S(KC_F3),
                                                                 S(KC_HOME),
                                            S(KC_SPC),S(KC_BSPC),S(KC_END),
           // right hand
