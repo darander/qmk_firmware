@@ -59,7 +59,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                           NO_AT,      NO_AA,      NO_AE,     NO_OSLH,     MO(NAVI),
              KC_RALT,        LCTL(KC_ESC),
              KC_PGUP,
-             KC_PGDN,KC_TAB, KC_ENT
+             RGUI_T(KC_PGDN),KC_TAB, KC_ENT
     ),
   /* Keymap 1: Shifted layer
    *
