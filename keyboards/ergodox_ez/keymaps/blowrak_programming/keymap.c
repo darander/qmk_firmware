@@ -102,7 +102,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                             NO_CIRC,    S(NO_AA),   S(NO_AE),  S(NO_OSLH),  OSL(SYMB),
                S(KC_LALT),        CTL_T(KC_ESC),
                S(KC_PGUP),
-               S(KC_PGDN), S(KC_TAB), S(KC_ENT)
+               S(KC_PGDN), KC_TAB, KC_ENT
       ),
 
 /* Keymap 2: Symbol Layer
