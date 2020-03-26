@@ -52,11 +52,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                               KC_HOME,
                                                KC_SPC,KC_BSPC,KC_END,
         // right hand
-             NO_ASTR,     NO_RPRN,    NO_PLUS,    NO_RBRC,   KC_EXLM,     KC_HASH,    NO_MINS,
+             SE_ASTR,     NO_RPRN,    NO_PLUS,    NO_RBRC,   KC_EXLM,     KC_HASH,    NO_MINS,
              KC_LGUI,     KC_F,       KC_G,       KC_C,      KC_R,        KC_L,       NO_SLSH,
                           KC_H,       KC_D,       KC_T,      KC_N,        KC_S,       NO_BSLS,
              KC_RCTL,     KC_X,       KC_M,       KC_W,      KC_V,        KC_Z,       OSL(SHFT),
-                          NO_AT,      NO_AA,      NO_AE,     NO_OSLH,     OSL(NAVI),
+                          NO_AT,      SE_AA,      NO_AE,     NO_OSLH,     OSL(NAVI),
              KC_RALT,        LCTL(KC_ESC),
              KC_PGUP,
              RGUI_T(KC_PGDN),KC_TAB, KC_ENT
@@ -99,7 +99,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                S(KC_ENT),   S(KC_F),    S(KC_G),    S(KC_C),   S(KC_R),     S(KC_L),    NO_QUES,
                             S(KC_H),    S(KC_D),    S(KC_T),   S(KC_N),     S(KC_S),    NO_PIPE,
                S(KC_BSPC),  S(KC_X),    S(KC_M),    S(KC_W),   S(KC_V),     S(KC_Z),    OSL(SHFT),
-                            NO_CIRC,    S(NO_AA),   S(NO_AE),  S(NO_OSLH),  OSL(SYMB),
+                            NO_CIRC,    S(SE_AA),   S(NO_AE),  S(NO_OSLH),  OSL(SYMB),
                S(KC_LALT),        CTL_T(KC_ESC),
                S(KC_PGUP),
                S(KC_PGDN), KC_TAB, KC_ENT
@@ -139,7 +139,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                      KC_TRNS,KC_TRNS,KC_TRNS,
        // right hand
        KC_NO, KC_F6,   KC_F7,  KC_F8,   KC_F9,   KC_F10,  KC_F11,
-       KC_NO, KC_UP,   KC_7,   KC_8,    KC_9,    NO_ASTR, KC_F12,
+       KC_NO, KC_UP,   KC_7,   KC_8,    KC_9,    SE_ASTR, KC_F12,
                 KC_DOWN, KC_4,   KC_5,    KC_6,    NO_PLUS, KC_NO,
        KC_NO, NO_AMPR, KC_1,   KC_2,    KC_3,    NO_BSLS, KC_TRNS,
                          KC_NO,KC_DOT,  KC_0,    NO_EQL,  KC_TRNS,
